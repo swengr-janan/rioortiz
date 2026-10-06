@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Rioanne Ortiz, CPA | Tax Specialist</title>
+<meta name="description" content="Rioanne Ortiz, CPA. Tax specialist in corporate tax compliance, VAT and indirect tax, with Big Four, Shell and US advisory experience. Based in Madrid.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;500;600&family=Source+Serif+4:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f6f8f9; --surface:#ffffff; --ink:#122433; --muted:#506172; --line:#dbe3e8;
+  --accent:#0d6b63; --accent-ink:#ffffff; --tint:#e6f2f0;
+  --serif:"Source Serif 4",Georgia,"Times New Roman",serif;
+  --sans:"Libre Franklin",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+  box-sizing:border-box; padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){--bg:#0e1a24;--surface:#142431;--ink:#e8eef2;--muted:#9db0bf;--line:#243645;--accent:#4fc2b6;--accent-ink:#06201d;--tint:#14332f}
+}
+:root[data-theme="dark"]{--bg:#0e1a24;--surface:#142431;--ink:#e8eef2;--muted:#9db0bf;--line:#243645;--accent:#4fc2b6;--accent-ink:#06201d;--tint:#14332f}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:calc(72px + env(safe-area-inset-top,0px))}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);line-height:1.65;font-size:17px;-webkit-font-smoothing:antialiased}
+a{color:var(--accent)}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:4px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 24px}
+h1,h2,h3{font-family:var(--serif);line-height:1.2;margin:0;letter-spacing:-.01em}
+h2{font-size:clamp(1.7rem,3vw,2.1rem);margin-bottom:28px}
+section{padding:72px 0;border-top:1px solid var(--line)}
+#home{border-top:0;padding:64px 0 72px}
+
+/* nav */
+header{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);padding-top:env(safe-area-inset-top,0px)}
+.bar{display:flex;align-items:center;justify-content:space-between;height:64px}
+.brand{font-family:var(--serif);font-weight:700;font-size:1.15rem;color:var(--ink);text-decoration:none}
+nav ul{display:flex;gap:6px;list-style:none;margin:0;padding:0}
+nav a{display:block;padding:8px 12px;border-radius:6px;color:var(--muted);text-decoration:none;font-size:.95rem;font-weight:500}
+nav a:hover{color:var(--ink)}
+nav a.active{color:var(--accent);background:var(--tint)}
+.menu-btn{display:none;background:none;border:1px solid var(--line);color:var(--ink);border-radius:6px;padding:8px 12px;font:inherit;font-size:.9rem;cursor:pointer}
+
+/* hero */
+.hero{display:grid;grid-template-columns:1.5fr 1fr;gap:56px;align-items:center}
+.hero h1{font-size:clamp(2.4rem,6vw,3.8rem);font-weight:700}
+.role{font-family:var(--serif);font-size:1.3rem;color:var(--accent);margin:10px 0 20px;font-weight:600}
+.lead{color:var(--muted);max-width:56ch;margin:0 0 28px}
+.btns{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-block;padding:12px 22px;border-radius:8px;font-weight:600;text-decoration:none;font-size:.97rem;border:1.5px solid var(--accent)}
+.btn.primary{background:var(--accent);color:var(--accent-ink)}
+.btn.ghost{color:var(--accent);background:transparent}
+.btn:hover{filter:brightness(1.08)}
+.glance{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:24px 26px}
+.glance h3{font-size:1.05rem;margin-bottom:14px}
+.glance dl{margin:0}
+.glance dt{font-size:.85rem;color:var(--muted);margin-top:14px}
+.glance dd{margin:2px 0 0;font-weight:600}
+.status{display:inline-flex;align-items:center;gap:8px;background:var(--tint);color:var(--accent);padding:6px 12px;border-radius:99px;font-size:.88rem;font-weight:600;margin-bottom:22px}
+.status::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--accent)}
+
+/* stats */
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:56px;border:1px solid var(--line);border-radius:12px;background:var(--surface);overflow:hidden}
+.stat{padding:22px 26px;border-right:1px solid var(--line)}
+.stat:last-child{border-right:0}
+.stat strong{display:block;font-family:var(--serif);font-size:1.9rem;line-height:1.1}
+.stat span{color:var(--muted);font-size:.93rem}
+
+/* about */
+.about{max-width:70ch;color:var(--ink)}
+.about p{margin:0 0 16px}
+
+/* experience */
+.job{display:grid;grid-template-columns:200px 1fr;gap:32px;padding:30px 0;border-top:1px solid var(--line)}
+.job:first-of-type{border-top:0;padding-top:0}
+.when{color:var(--muted);font-size:.92rem}
+.when strong{display:block;color:var(--ink);font-size:1rem;margin-bottom:2px}
+.job h3{font-size:1.3rem}
+.org{color:var(--accent);font-weight:600;margin:2px 0 12px}
+.job ul{margin:0;padding-left:20px}
+.job li{margin-bottom:8px}
+.job li::marker{color:var(--accent)}
+
+/* skills */
+.skills{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:24px}
+.card h3{font-size:1.1rem;margin-bottom:14px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;list-style:none;margin:0;padding:0}
+.chips li{background:var(--tint);color:var(--ink);padding:5px 12px;border-radius:99px;font-size:.88rem}
+
+/* credentials */
+.creds{display:grid;gap:14px}
+.cred{display:flex;gap:18px;align-items:baseline;justify-content:space-between;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:18px 24px}
+.cred.main{border-left:5px solid var(--accent)}
+.cred b{display:block;font-family:var(--serif);font-size:1.1rem}
+.cred span{color:var(--muted);font-size:.93rem}
+.cred em{font-style:normal;color:var(--muted);font-size:.9rem;white-space:nowrap}
+
+/* contact */
+.contact{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start}
+.contact p{color:var(--muted);margin:0 0 20px;max-width:46ch}
+.links{list-style:none;margin:0;padding:0;display:grid;gap:12px}
+.links li{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:14px 18px}
+.links small{display:block;color:var(--muted)}
+.links a{font-weight:600;word-break:break-all}
+footer{border-top:1px solid var(--line);padding:28px 0 36px;color:var(--muted);font-size:.9rem}
+.foot{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
+.theme{background:none;border:1px solid var(--line);color:var(--muted);border-radius:6px;padding:6px 12px;font:inherit;font-size:.85rem;cursor:pointer}
+
+@media (max-width:820px){
+  body{font-size:16.5px}
+  .menu-btn{display:block}
+  nav{position:absolute;left:0;right:0;top:100%;background:var(--bg);border-bottom:1px solid var(--line);display:none}
+  nav.open{display:block}
+  nav ul{flex-direction:column;padding:10px 24px 16px}
+  .hero,.contact,.skills{grid-template-columns:1fr}
+  .hero{gap:36px}
+  .stats{grid-template-columns:1fr}
+  .stat{border-right:0;border-bottom:1px solid var(--line)}
+  .stat:last-child{border-bottom:0}
+  .job{grid-template-columns:1fr;gap:10px}
+  .cred{flex-direction:column;gap:4px}
+  section{padding:56px 0}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+@media print{header,.theme,.menu-btn,.btns{display:none}section{padding:24px 0}}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap bar">
+    <a class="brand" href="#home">Rioanne Ortiz, CPA</a>
+    <button class="menu-btn" aria-expanded="false" aria-controls="nav">Menu</button>
+    <nav id="nav" aria-label="Main">
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#credentials">Credentials</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section id="home">
+  <div class="wrap">
+    <div class="hero">
+      <div>
+        <p class="status">Available immediately</p>
+        <h1>Rioanne Ortiz, CPA</h1>
+        <p class="role">Tax Specialist in Corporate Tax and VAT</p>
+        <p class="lead">I prepare and file accurate, on-time tax returns, reconcile tax accounts and automate the processes behind them. My experience spans a Big Four firm, Shell's global shared services center and a US tax advisory practice.</p>
+        <div class="btns">
+          <a class="btn primary" href="mailto:riozitro@gmail.com">Get in touch</a>
+          <a class="btn ghost" href="#experience">View experience</a>
+        </div>
+      </div>
+      <aside class="glance" aria-label="At a glance">
+        <h3>At a glance</h3>
+        <dl>
+          <dt>Location</dt><dd>Madrid, Spain</dd>
+          <dt>Work authorization</dt><dd>Authorized to work in Spain</dd>
+          <dt>Education recognition</dt><dd>Official Spanish degree equivalency</dd>
+          <dt>Looking for</dt><dd>Tax, accounting, compliance and finance roles</dd>
+        </dl>
+      </aside>
+    </div>
+    <div class="stats">
+      <div class="stat"><strong>5+ years</strong><span>in corporate tax and accounting</span></div>
+      <div class="stat"><strong>3 employers</strong><span>EY member firm, Shell and a US tax advisory firm</span></div>
+      <div class="stat"><strong>5 US return types</strong><span>Forms 1120, 1065, 1040, 990 and 1041</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="wrap">
+    <h2>About</h2>
+    <div class="about">
+      <p>I am a Certified Public Accountant with hands-on experience in direct and indirect tax: corporate income tax, VAT and withholding tax, from return preparation and e-filing to refunds and audit support.</p>
+      <p>I started in tax at SGV and Co. (a member firm of EY), where I led engagement teams. At Shell Business Operations I owned tax compliance and month-end close for a Large Taxpayer entity, working in SAP ERP and contributing to automation and e-invoicing projects. Most recently I prepared US federal and state returns for a California advisory firm.</p>
+      <p>I now live in Madrid, hold official Spanish recognition of my university degree, and am ready to bring this experience to a Spanish or international team.</p>
+    </div>
+  </div>
+</section>
+
+<section id="experience">
+  <div class="wrap">
+    <h2>Experience</h2>
+
+    <article class="job">
+      <div class="when"><strong>Jun 2025 to Feb 2026</strong>Remote, California, USA</div>
+      <div>
+        <h3>Tax Consultant</h3>
+        <p class="org">Unified Accounting and Tax LLP</p>
+        <ul>
+          <li>Prepared and filed US federal and California returns for corporations, partnerships, individuals, nonprofits, and estates and trusts.</li>
+          <li>Researched complex tax issues and recommended planning strategies to reduce client tax burden.</li>
+          <li>Supported clients through federal and state tax audits, preparing documentation for tax authorities.</li>
+          <li>Monitored tax law changes and maintained the client tax database.</li>
+        </ul>
+      </div>
+    </article>
+
+    <article class="job">
+      <div class="when"><strong>Oct 2024 to Jun 2025</strong>Makati City, Philippines</div>
+      <div>
+        <h3>Tax Specialist</h3>
+        <p class="org">Shell Business Operations Manila</p>
+        <ul>
+          <li>Prepared and filed highly complex withholding tax returns and e-filing attachments for a Large Taxpayer entity with the Bureau of Internal Revenue.</li>
+          <li>Built tax workpapers from general ledger data in SAP ERP.</li>
+          <li>Owned the month-end close for tax accounts, including reconciliations, journal vouchers and control checks.</li>
+          <li>Held end-to-end compliance ownership for internal controls and risk metrics, and coordinated with vendors, stakeholders and external auditors.</li>
+          <li>Contributed to the Certificate of Withheld Taxes automation project.</li>
+        </ul>
+      </div>
+    </article>
+
+    <article class="job">
+      <div class="when"><strong>Aug 2022 to Sep 2024</strong>Makati City, Philippines</div>
+      <div>
+        <h3>Tax Analyst</h3>
+        <p class="org">Shell Business Operations Manila</p>
+        <ul>
+          <li>Prepared and filed highly complex VAT returns and withholding tax returns following the entity's PEZA deregistration.</li>
+          <li>Led the VAT refund process from claim preparation through supporting documentation.</li>
+          <li>Served as tax approver for the Philippines in the vendor tax vetting system.</li>
+          <li>Tested VAT return automation and supported the BIR e-invoicing and e-reporting implementation.</li>
+          <li>Acted as point of contact for auditors and performed month-end tax account reconciliations.</li>
+        </ul>
+      </div>
+    </article>
+
+    <article class="job">
+      <div class="when"><strong>Dec 2019 to Aug 2021</strong>Makati City, Philippines</div>
+      <div>
+        <h3>Tax Associate / Experienced Tax Associate</h3>
+        <p class="org">SGV and Co. (EY Philippines)</p>
+        <ul>
+          <li>Led engagement teams preparing and reviewing tax returns for multiple corporate clients, and supervised associates across concurrent engagements.</li>
+          <li>Tested client internal controls to ensure BIR compliance and reduce tax audit exposure.</li>
+          <li>Prepared schedules and documentation for clients under BIR tax audits.</li>
+          <li>Helped deliver tax seminars to corporate clients and government agencies.</li>
+        </ul>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section id="skills">
+  <div class="wrap">
+    <h2>Skills</h2>
+    <div class="skills">
+      <div class="card"><h3>Tax compliance</h3><ul class="chips">
+        <li>Corporate income tax</li><li>VAT and indirect tax</li><li>Withholding tax</li><li>Tax returns and e-filing</li><li>VAT refunds</li><li>E-invoicing and e-reporting</li><li>Tax audits</li><li>Tax planning</li><li>US federal and state tax</li></ul></div>
+      <div class="card"><h3>Tax accounting</h3><ul class="chips">
+        <li>Tax provision</li><li>Deferred taxes (IAS 12 / ASC 740)</li><li>Tax account reconciliations</li><li>Journal entries</li></ul></div>
+      <div class="card"><h3>Accounting and close</h3><ul class="chips">
+        <li>Month-end close</li><li>General ledger analysis</li><li>Trial balance analysis</li><li>Intercompany reconciliation</li><li>Variance analysis</li></ul></div>
+      <div class="card"><h3>Audit and controls</h3><ul class="chips">
+        <li>Internal controls</li><li>Test of controls</li><li>Substantive testing</li><li>Audit workpapers</li><li>Risk management</li><li>Regulatory compliance</li></ul></div>
+      <div class="card"><h3>Systems</h3><ul class="chips">
+        <li>SAP ERP</li><li>Advanced Excel</li><li>Pivot tables</li><li>Financial modeling</li><li>Karbon</li><li>Process automation</li></ul></div>
+      <div class="card"><h3>Working with others</h3><ul class="chips">
+        <li>Stakeholder management</li><li>Vendor management</li><li>Auditor liaison</li><li>Team supervision</li><li>Continuous improvement</li></ul></div>
+    </div>
+  </div>
+</section>
+
+<section id="credentials">
+  <div class="wrap">
+    <h2>Education and certifications</h2>
+    <div class="creds">
+      <div class="cred main"><div><b>Certified Public Accountant (CPA)</b><span>Professional Regulation Commission, Philippines</span></div></div>
+      <div class="cred main"><div><b>Official Spanish university degree equivalency</b><span>Ministerio de Ciencia, Innovación y Universidades, Spain</span></div></div>
+      <div class="cred"><div><b>BS in Accountancy</b><span>Divine Word College of Legazpi, Philippines</span></div><em>2017 to 2018</em></div>
+      <div class="cred"><div><b>BS in Managerial Accounting</b><span>Bicol University, Philippines</span></div><em>2013 to 2017</em></div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap">
+    <h2>Contact</h2>
+    <div class="contact">
+      <div>
+        <p>I am available immediately and authorized to work in Spain. If you have a tax, accounting, compliance or finance role in mind, I would be glad to hear from you.</p>
+        <div class="btns"><a class="btn primary" href="mailto:riozitro@gmail.com">Email Rioanne</a></div>
+      </div>
+      <ul class="links">
+        <li><small>Email</small><a href="mailto:riozitro@gmail.com">riozitro@gmail.com</a></li>
+        <li><small>Phone</small><a href="tel:+34603458828">+34 603 45 8828</a></li>
+        <li><small>LinkedIn</small><a href="https://linkedin.com/in/rioanneortiz" target="_blank" rel="noopener">linkedin.com/in/rioanneortiz</a></li>
+        <li><small>Location</small>Madrid, Spain</li>
+      </ul>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <span>&copy; <span id="yr">2026</span> Rioanne Ortiz, CPA</span>
+    <button class="theme" id="theme" type="button">Switch theme</button>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var btn=document.querySelector('.menu-btn'), nav=document.getElementById('nav');
+  btn.addEventListener('click',function(){
+    var open=nav.classList.toggle('open'); btn.setAttribute('aria-expanded',open);
+  });
+  nav.addEventListener('click',function(e){ if(e.target.tagName==='A'){nav.classList.remove('open');btn.setAttribute('aria-expanded','false');} });
+
+  var links=[].slice.call(document.querySelectorAll('nav a'));
+  var secs=links.map(function(a){return document.querySelector(a.getAttribute('href'));});
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if(en.isIntersecting){
+          links.forEach(function(a){a.classList.toggle('active',a.getAttribute('href')==='#'+en.target.id);});
+        }
+      });
+    },{rootMargin:'-45% 0px -50% 0px'});
+    secs.forEach(function(s){if(s)io.observe(s);});
+  }
+
+  document.getElementById('yr').textContent=new Date().getFullYear();
+
+  var root=document.documentElement;
+  document.getElementById('theme').addEventListener('click',function(){
+    var dark=root.getAttribute('data-theme')==='dark' ||
+      (!root.getAttribute('data-theme') && window.matchMedia('(prefers-color-scheme: dark)').matches);
+    root.setAttribute('data-theme',dark?'light':'dark');
+  });
+})();
+</script>
+</body>
+</html>
